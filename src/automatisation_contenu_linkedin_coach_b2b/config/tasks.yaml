@@ -1,0 +1,35 @@
+---
+analyse_des_tendances_b2b:
+  description: Rechercher et analyser les dernieres tendances, defis et opportunites
+    dans le domaine {expertise_coaching} pour les entreprises B2B. Identifier les
+    sujets d'actualite qui interesseraient les dirigeants et equipes commerciales.
+    Analyser les discussions et problematiques recurrentes sur LinkedIn dans votre
+    secteur.
+  expected_output: 'Un rapport detaille des 5 principales tendances actuelles dans
+    {expertise_coaching} pour le B2B, avec pour chacune : le contexte, les enjeux,
+    les opportunites et des angles de contenu potentiels pour LinkedIn'
+  agent: analyste_tendances_b2b
+strategie_contenu_linkedin:
+  description: Elaborer une strategie de contenu LinkedIn personnalisee basee sur
+    les tendances identifiees et les meilleures pratiques de la plateforme. Definir
+    les formats de posts les plus adaptes, les horaires optimaux, et les call-to-action
+    les plus efficaces pour {expertise_coaching}. Analyser les contenus performants
+    de leaders du secteur.
+  expected_output: 'Une strategie detaillee incluant : 5 types de contenus recommandes
+    avec exemples, planning de publication optimal, guidelines de ton et style, suggestions
+    de hashtags pertinents, et strategies d''engagement pour maximiser la portee'
+  agent: stratege_contenu_linkedin
+  context:
+  - analyse_des_tendances_b2b
+redaction_posts_linkedin:
+  description: Rediger 5 posts LinkedIn prets a publier sur le theme {sujet_contenu},
+    en suivant la strategie etablie. Chaque post doit etre adapte a un format different
+    (histoire personnelle, conseil pratique, question d'engagement, insight sectoriel,
+    case study). Integrer naturellement votre expertise en coaching commercial et
+    inciter a l'interaction.
+  expected_output: '5 posts LinkedIn complets et prets a publier, chacun avec : le
+    texte optimise (max 1300 caracteres), les hashtags strategiques, un call-to-action
+    engage, et des suggestions visuelles ou de format si applicable'
+  agent: redacteur_posts_linkedin
+  context:
+  - strategie_contenu_linkedin
